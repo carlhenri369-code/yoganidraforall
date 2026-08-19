@@ -206,6 +206,32 @@
   details[open] summary::after{transform:rotate(45deg)}
   details p{margin-top:.8rem;font-size:.99rem}
 
+  /* Kind words */
+  .kind-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.6rem;margin-top:2.4rem}
+  @media(max-width:52rem){.kind-grid{grid-template-columns:1fr}}
+  .kind{
+    background:#fff;border:1px solid var(--line-light);border-radius:14px;
+    padding:1.8rem 1.7rem;box-shadow:0 2px 14px rgba(35,41,70,.05);
+    display:flex;flex-direction:column;
+  }
+  .kind p{
+    font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:1.08rem;
+    line-height:1.6;color:var(--ink);margin:0 0 1.1rem;
+  }
+  .kind cite{
+    margin-top:auto;font-style:normal;font-family:'Karla',sans-serif;
+    font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:#B0853B;
+  }
+  .kind-lines{margin-top:2rem;text-align:center}
+  .kind-lines p{
+    font-family:'Fraunces',Georgia,serif;font-style:italic;
+    color:var(--ink-soft);font-size:1.05rem;margin:0 0 .7rem;
+  }
+  .kind-lines span{
+    font-family:'Karla',sans-serif;font-style:normal;font-size:.8rem;
+    letter-spacing:.12em;text-transform:uppercase;color:#B0853B;margin-left:.6rem;
+  }
+
   /* ---------- CONTACT / FOOTER ---------- */
   .contact{background:var(--day-deep)}
   .contact .big-phone{
@@ -332,12 +358,6 @@
     Back in London I taught weekly classes in Walthamstow and Notting Hill
     until the 2020 lockdown paused everything. Now I’m bringing the practice
     back to my own neighbourhood.</p>
-    <blockquote class="quote">
-      “Carl is patient and kind and draws from a well of experience where you
-      feel very comfortable exploring your inner world with his help and
-      gentle guidance.”
-      <cite>— a class member</cite>
-    </blockquote>
     <div class="lineage" aria-label="Teaching lineage">
       <span>Swami Sivananda</span><span class="arrow">→</span>
       <span>Swami Satyananda</span><span class="arrow">→</span>
@@ -474,6 +494,41 @@
       provided at classes; for home sessions you just need somewhere warm
       to lie down.</p>
     </details>
+  </div>
+</section>
+
+<!-- ══════════════ KIND WORDS ══════════════ -->
+<section class="light" id="kind-words" style="padding-top:1.5rem">
+  <div class="wrap-wide">
+    <span class="eyebrow">Kind words</span>
+    <h2>What students have said</h2>
+    <div class="kind-grid">
+      <figure class="kind" style="margin:0">
+        <p>“Carl is patient and kind and draws from a well of experience
+        where you feel very comfortable exploring your inner world with his
+        help and gentle guidance. I highly recommend attending his classes
+        and going on the journey that is Yoga Nidra.”</p>
+        <cite>— Alex</cite>
+      </figure>
+      <figure class="kind" style="margin:0">
+        <p>“I felt comfortable, inspired and enjoyed every single minute of
+        the experience. Carl is a wonderful, passionate and very competent
+        Yoga Nidra teacher and I am already looking forward to new classes
+        with him!”</p>
+        <cite>— Marci</cite>
+      </figure>
+      <figure class="kind" style="margin:0">
+        <p>“If you are new to Yoga Nidra Carl can give you a great
+        introduction to this ancient practice, and if you are already
+        practising then he can certainly help you to deepen your
+        practice.”</p>
+        <cite>— Ian</cite>
+      </figure>
+    </div>
+    <div class="kind-lines">
+      <p>“An absolutely powerful and wonderful experience.”<span>— Jasmine</span></p>
+      <p>“Thank you Carl for your great way of teaching this powerful practice!!”<span>— Stefania</span></p>
+    </div>
   </div>
 </section>
 
