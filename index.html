@@ -9,6 +9,9 @@
 <meta property="og:description" content="Deep rest, taught in person, by a teacher trained at the source. Private sessions in Notting Hill &amp; Holland Park now — group classes from September.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://yoganidraforall.co.uk/">
+<meta property="og:image" content="https://yoganidraforall.co.uk/images/og-banner.png">
+<meta property="og:image:width" content="1640">
+<meta property="og:image:height" content="624">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕯️</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,26 +75,25 @@
     min-height:92vh;display:flex;flex-direction:column;justify-content:center;
     background:
       radial-gradient(60rem 34rem at 50% 118%, rgba(232,185,107,.20), transparent 60%),
-      linear-gradient(180deg,#10142A 0%, var(--night) 55%, #1A2140 100%);
-    text-align:center;position:relative;padding:5rem 0 4.5rem;
+      linear-gradient(180deg,#4A3B72 0%, #55407C 26%, #383260 58%, var(--night) 100%);
+    text-align:center;position:relative;padding:4.5rem 0 4.5rem;
   }
-  .brand{
-    font-family:'Karla',sans-serif;font-size:.8rem;font-weight:700;
-    letter-spacing:.3em;text-transform:uppercase;color:var(--moth-dim);
+  .lockup{display:flex;flex-direction:column;align-items:center;margin-bottom:2.6rem}
+  .lockup .mark{width:160px;height:138px}
+  .wm{display:inline-block;position:relative;text-align:left;margin-top:-14px}
+  .wm-yn{
+    font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:40px;line-height:1;
+    display:block;white-space:nowrap;padding-bottom:11.2px;
+    background:linear-gradient(#F6DFA4,#F1C878);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
   }
-  .flame{
-    width:14px;height:22px;margin:2rem auto 2.2rem;border-radius:50% 50% 50% 50%/62% 62% 38% 38%;
-    background:radial-gradient(circle at 50% 78%, #FFF3D8 0%, var(--flame) 42%, var(--candle) 72%, rgba(232,185,107,0) 100%);
-    box-shadow:0 0 26px 9px rgba(232,185,107,.30), 0 0 70px 28px rgba(232,185,107,.12);
-    animation:breathe 6s ease-in-out infinite;
+  .wm-fa{
+    font-family:'Karla',sans-serif;font-weight:400;font-size:15px;letter-spacing:.5em;
+    position:absolute;left:calc(35% + 4.2px);right:-4.2px;text-align:center;line-height:1;
+    top:calc(100% - 11.2px - 2.4px);color:#F1C878;
   }
-  @keyframes breathe{
-    0%,100%{transform:scale(1) ;opacity:.92}
-    50%{transform:scale(1.14);opacity:1}
-  }
-  @media (prefers-reduced-motion: reduce){ .flame{animation:none} }
   .hero h1{
-    font-size:clamp(2.5rem,7vw,4.4rem);color:#F3EFE4;font-weight:300;
+    font-size:clamp(1.9rem,7.8vw,4.4rem);color:#F3EFE4;font-weight:300;
     letter-spacing:.01em;
   }
   .hero h1 em{font-style:italic;color:var(--flame)}
@@ -226,8 +228,32 @@
 <!-- ══════════════ DUSK · the descent ══════════════ -->
 <header class="hero">
   <div class="wrap">
-    <p class="brand">Yoga Nidra for All · with Carl Parratt</p>
-    <div class="flame" aria-hidden="true"></div>
+    <div class="lockup" role="img" aria-label="Yoga Nidra for All">
+      <svg class="mark" viewBox="-100 -92 200 172" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <defs>
+          <linearGradient id="lkbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4C3C74"/><stop offset="1" stop-color="#55407C"/></linearGradient>
+          <linearGradient id="lkau" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6DFA4"/><stop offset="1" stop-color="#F1C878"/></linearGradient>
+        </defs>
+        <g stroke="url(#lkau)" fill="url(#lkbg)">
+          <g transform="translate(0 6)">
+            <path d="M0 20 C -15 14 -21 -4 -14 -26 C -9 -41 -4 -51 0 -58 C 4 -51 9 -41 14 -26 C 21 -4 15 14 0 20 Z" transform="translate(17 10) rotate(72) scale(0.68)"/>
+            <path d="M0 20 C -15 14 -21 -4 -14 -26 C -9 -41 -4 -51 0 -58 C 4 -51 9 -41 14 -26 C 21 -4 15 14 0 20 Z" transform="translate(-17 10) rotate(-72) scale(0.68)"/>
+            <path d="M0 20 C -15 14 -21 -4 -14 -26 C -9 -41 -4 -51 0 -58 C 4 -51 9 -41 14 -26 C 21 -4 15 14 0 20 Z" transform="translate(11 4) rotate(48) scale(0.85)"/>
+            <path d="M0 20 C -15 14 -21 -4 -14 -26 C -9 -41 -4 -51 0 -58 C 4 -51 9 -41 14 -26 C 21 -4 15 14 0 20 Z" transform="translate(-11 4) rotate(-48) scale(0.85)"/>
+            <path d="M0 20 C -15 14 -21 -4 -14 -26 C -9 -41 -4 -51 0 -58 C 4 -51 9 -41 14 -26 C 21 -4 15 14 0 20 Z" transform="scale(1.08)"/>
+            <path d="M0 20 C -15 14 -21 -4 -14 -26 C -9 -41 -4 -51 0 -58 C 4 -51 9 -41 14 -26 C 21 -4 15 14 0 20 Z" transform="translate(5 1) rotate(24) scale(0.95)"/>
+            <path d="M0 20 C -15 14 -21 -4 -14 -26 C -9 -41 -4 -51 0 -58 C 4 -51 9 -41 14 -26 C 21 -4 15 14 0 20 Z" transform="translate(-5 1) rotate(-24) scale(0.95)"/>
+            <path d="M0 16 C -17 12 -22 -6 -13 -23 C -8 -33 -3 -39 0 -43 C 3 -39 8 -33 13 -23 C 22 -6 17 12 0 16 Z" transform="translate(5 9) rotate(18) scale(0.95)"/>
+            <path d="M0 16 C -17 12 -22 -6 -13 -23 C -8 -33 -3 -39 0 -43 C 3 -39 8 -33 13 -23 C 22 -6 17 12 0 16 Z" transform="translate(-5 9) rotate(-18) scale(0.95)"/>
+          </g>
+          <path d="M -58 46 A 74 74 0 1 1 58 46" fill="none"/>
+        </g>
+      </svg>
+      <span class="wm">
+        <span class="wm-yn">Yoga Nidra</span>
+        <span class="wm-fa">FOR ALL</span>
+      </span>
+    </div>
     <h1>Lie down. Let&nbsp;go.<br><em>Wake up restored.</em></h1>
     <p class="sub">Yoga Nidra is deep, guided relaxation — sometimes called
     “yogic sleep”. No flexibility, no experience, no effort. You simply lie
