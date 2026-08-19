@@ -72,25 +72,39 @@
 
   /* ---------- HERO ---------- */
   .hero{
-    min-height:92vh;display:flex;flex-direction:column;justify-content:center;
-    background:
-      radial-gradient(60rem 34rem at 50% 118%, rgba(232,185,107,.20), transparent 60%),
-      linear-gradient(180deg,#4A3B72 0%, #55407C 26%, #383260 58%, var(--night) 100%);
-    text-align:center;position:relative;padding:4.5rem 0 4.5rem;
+    background:linear-gradient(180deg,#3A3160 0%, #262647 45%, var(--night) 100%);
+    text-align:center;padding:0 0 4.5rem;
   }
-  .lockup{display:flex;flex-direction:column;align-items:center;margin-bottom:2.6rem}
-  .lockup .mark{width:160px;height:138px}
-  .wm{display:inline-block;position:relative;text-align:left;margin-top:-14px}
-  .wm-yn{
-    font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:40px;line-height:1;
-    display:block;white-space:nowrap;padding-bottom:11.2px;
+  .cover{position:relative;aspect-ratio:1640/480;overflow:hidden;
+    background:linear-gradient(160deg,#4A3B72,#8A5A96);}
+  .cover .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    object-position:50% 40%;filter:grayscale(1);opacity:.2;}
+  .cover .lk{--u:1vw;position:absolute;inset:0;display:flex;align-items:center;
+    justify-content:center;gap:var(--u);
+    filter:drop-shadow(0 calc(var(--u)*.18) calc(var(--u)*.43) rgba(0,0,0,.3));}
+  .lk svg{width:calc(var(--u)*18.3);height:calc(var(--u)*15.73);}
+  .lk .w{padding-bottom:calc(var(--u)*2.2);display:inline-block;}
+  .lk .wi{display:inline-block;position:relative;text-align:left;}
+  .lk .yn{
+    font-family:'Fraunces',Georgia,serif;font-weight:300;line-height:1;display:block;
+    white-space:nowrap;font-size:calc(var(--u)*5.61);padding-bottom:calc(var(--u)*1.57);
     background:linear-gradient(#F6DFA4,#F1C878);
     -webkit-background-clip:text;background-clip:text;color:transparent;
   }
-  .wm-fa{
-    font-family:'Karla',sans-serif;font-weight:400;font-size:15px;letter-spacing:.5em;
-    position:absolute;left:calc(35% + 4.2px);right:-4.2px;text-align:center;line-height:1;
-    top:calc(100% - 11.2px - 2.4px);color:#F1C878;
+  .lk .fa{
+    font-family:'Karla',sans-serif;font-weight:400;letter-spacing:.5em;line-height:1;
+    font-size:calc(var(--u)*2.13);position:absolute;text-align:center;
+    left:calc(35% + var(--u)*.6);right:calc(var(--u)*-.6);
+    top:calc(100% - var(--u)*1.57 - var(--u)*.34);color:#F1C878;
+  }
+  @media(max-width:640px){
+    .cover{aspect-ratio:1640/700}
+    .cover .lk{--u:1.5vw}
+  }
+  .hero .wrap{padding-top:2.4rem}
+  .restored{
+    font-family:'Fraunces',Georgia,serif;font-weight:300;
+    font-size:clamp(.95rem,3.9vw,2.2rem);color:var(--flame);margin-top:.5rem;
   }
   .hero h1{
     font-size:clamp(1.9rem,7.8vw,4.4rem);color:#F3EFE4;font-weight:300;
@@ -98,12 +112,12 @@
   }
   .hero h1 em{font-style:italic;color:var(--flame)}
   .hero .sub{
-    margin:1.6rem auto 0;max-width:34rem;color:var(--moth);font-size:1.1rem;
+    margin:1.2rem auto 0;max-width:34rem;color:var(--moth);font-size:1.1rem;
   }
   .hero .place{
     margin-top:.9rem;color:var(--moth-dim);font-size:.95rem;letter-spacing:.04em;
   }
-  .cta-row{margin-top:2.6rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+  .cta-row{margin-top:1.8rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
   .btn{
     display:inline-block;padding:.85rem 1.7rem;border-radius:2rem;
     font-weight:700;font-size:.98rem;text-decoration:none;letter-spacing:.02em;
@@ -114,7 +128,7 @@
   .btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,185,107,.35)}
   .btn-ghost{border:1px solid var(--line-dark);color:var(--moth)}
   .btn-ghost:hover{border-color:var(--candle);color:var(--flame)}
-  .hero .hint{margin-top:3.2rem;color:var(--moth-dim);font-size:.85rem;letter-spacing:.12em;text-transform:uppercase}
+  .hero .hint{margin-top:2.4rem;color:var(--moth-dim);font-size:.85rem;letter-spacing:.12em;text-transform:uppercase}
 
   /* ---------- DARK SECTIONS ---------- */
   section{padding:5.5rem 0}
@@ -253,8 +267,9 @@
 
 <!-- ══════════════ DUSK · the descent ══════════════ -->
 <header class="hero">
-  <div class="wrap">
-    <div class="lockup" role="img" aria-label="Yoga Nidra for All">
+  <div class="cover" role="img" aria-label="Yoga Nidra for All — a class resting in savasana">
+    <img class="ph" src="images/savasana.jpg" alt="">
+    <div class="lk">
       <svg class="mark" viewBox="-100 -92 200 172" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <defs>
           <linearGradient id="lkbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4C3C74"/><stop offset="1" stop-color="#55407C"/></linearGradient>
@@ -275,12 +290,15 @@
           <path d="M -58 46 A 74 74 0 1 1 58 46" fill="none"/>
         </g>
       </svg>
-      <span class="wm">
-        <span class="wm-yn">Yoga Nidra</span>
-        <span class="wm-fa">FOR ALL</span>
-      </span>
+      <span class="w"><span class="wi">
+        <span class="yn">Yoga Nidra</span>
+        <span class="fa">FOR ALL</span>
+      </span></span>
     </div>
-    <h1>Lie down. Let&nbsp;go.<br><em>Wake up restored.</em></h1>
+  </div>
+  <div class="wrap">
+    <h1>Lie down. Let&nbsp;go.</h1>
+    <p class="restored"><em>Wake up restored.</em></p>
     <p class="sub">Yoga Nidra is deep, guided relaxation — sometimes called
     “yogic sleep”. No flexibility, no experience, no effort. You simply lie
     down, listen, and let the practice do the work.</p>
